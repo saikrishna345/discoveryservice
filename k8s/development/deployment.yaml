@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: discovery-microservice-deployment
+  namespace: development
+  labels:
+    app: discovery-microservice-app
+spec:
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        apps: discovery-microservice-server
+    spec:
+      containers:
+      - name: 
+        image: gcr.io/bats-qa/discovery-microservice-server:development
+        ports:
+        - containerPort: 8091

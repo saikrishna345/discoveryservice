@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: discovery-microservice-server-service
+  namespace: development
+spec:
+  ports:
+    - name: http
+      port: 8092
+  type: LoadBalancer    
+  selector:
+    apps: discovery-microservice-server
