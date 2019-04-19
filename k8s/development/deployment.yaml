@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: discovery-microservice-deployment
+  name: discovery-microservice-server
   namespace: development
   labels:
     app: discovery-microservice-app
